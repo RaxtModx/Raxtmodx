@@ -1,0 +1,28 @@
+:root{--bg:#0a0a0a;--card:#121212;--muted:#d0d0d0;--accent:#ff1a1a}
+*{box-sizing:border-box}html,body{height:100%;margin:0;font-family:Inter, Poppins, sans-serif;background:var(--bg);color:var(--muted)}
+a{color:var(--accent);text-decoration:none}
+.header{display:flex;justify-content:space-between;align-items:center;padding:14px 28px;background:#0f0f0f;border-bottom:1px solid #151515}
+.header h1{color:var(--accent);margin:0;font-size:20px}
+.nav a{margin-left:14px;color:#cfcfcf}
+.container{max-width:1100px;margin:32px auto;padding:16px}
+.login-wrap{display:flex;justify-content:center;align-items:center;height:60vh}
+.login-box{background:#141414;padding:28px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.6);width:360px;text-align:center;border:1px solid rgba(255,26,26,0.06)}
+.login-box h2{color:var(--accent);margin:0 0 8px}
+.input{width:100%;padding:10px;border-radius:8px;border:1px solid #232323;background:#0d0d0d;color:#fff;margin:8px 0}
+.btn{background:var(--accent);color:#fff;border:none;padding:10px 14px;border-radius:8px;cursor:pointer;font-weight:700}
+.btn.ghost{background:transparent;border:1px solid #333;color:var(--muted)}
+.mods-grid{display:grid;grid-template-columns:repeat(2,minmax(240px,1fr));gap:16px;margin-top:18px}
+.mod-card{background:var(--card);padding:14px;border-radius:10px;border:1px solid #1b1b1b;box-shadow:0 6px 20px rgba(0,0,0,0.5)}
+.mod-card h3{color:var(--accent);margin:0 0 6px}
+.mod-card p{color:#c9c9c9;font-size:14px}
+.mod-actions{display:flex;gap:8px;margin-top:10px}
+.footer{padding:18px;text-align:center;color:#999;margin-top:28px;border-top:1px solid #151515}
+@media(max-width:780px){.mods-grid{grid-template-columns:1fr}.login-box{width:92%}}
+.admin-wrap{max-width:900px;margin:28px auto;padding:18px}
+.table{background:#0f0f0f;padding:12px;border-radius:10px;border:1px solid #1a1a1a}
+.row{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+.row input{flex:1}
+.small{font-size:13px;color:#bbb}
+.video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;background:#000;margin-top:8px}
+.video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%}
+.notice{background:#111;padding:10px;border-radius:8px;color:#ddd;margin-top:10px}

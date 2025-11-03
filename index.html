@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Raxt Mods</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Raxt Mods</h1>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="admin-login.html">Admin</a>
+      <a href="owner.html">Dueño</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="login-area" class="login-wrap">
+      <div class="login-box" role="form">
+        <h2>Inicia sesión</h2>
+        <input id="loginName" class="input" placeholder="Nombre" />
+        <input id="loginPass" type="password" class="input" placeholder="Contraseña" />
+        <button id="loginBtn" class="btn">Login</button>
+        <p class="small" style="margin-top:10px">Solo nombre y contraseña. Se guarda localmente.</p>
+      </div>
+    </section>
+
+    <section id="content-area" style="display:none;">
+      <div class="notice">Bienvenido a <strong>Raxt Mods</strong> — la mejor plataforma para descargar mods.</div>
+
+      <h2 style="margin-top:18px">Últimos mods subidos</h2>
+      <div id="modsGrid" class="mods-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">Raxt Mods • &copy; 2025</footer>
+
+  <script src="script.js"></script>
+  <script>
+    // initialize UI after script loads
+    window.addEventListener('DOMContentLoaded', () => {
+      if(localStorage.getItem('raxt_user')){
+        document.getElementById('login-area').style.display='none';
+        document.getElementById('content-area').style.display='block';
+      }
+      renderModsGrid();
+    });
+  </script>
+</body>
+</html>
