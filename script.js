@@ -167,6 +167,40 @@ mport { fetchMods, saveModToDB } from "./firebase.js";
 // ADMIN LOGIN check at admin-login.html
 mport { fetchMods, saveModToDB } from "./firebase.js";
 function checkAdmin(){
+  alert("👉 checkAdmin SI está funcionando");
+
+  try {
+
+    const user = document.getElementById('adminUser').value.trim();
+    const key = document.getElementById('adminKey').value.trim();
+
+    alert("Usuario: " + user + " | Key: " + key);
+
+    if(!user||!key){ alert('Completa los campos'); return; }
+
+    if(key===OWNER_KEY){
+      alert("ENTRASTE COMO DUEÑO");
+      localStorage.setItem('owner_access','true');
+      location.href='owner.html';
+      return;
+    }
+
+    const admins = JSON.parse(localStorage.getItem('raxt_admins')||'[]');
+    const found = admins.find(a=>a.user===user && a.key===key);
+
+    if(found || key===ADMIN_KEY){
+      alert("ENTRASTE COMO ADMIN");
+      localStorage.setItem('admin_access','true');
+      localStorage.setItem('admin_name', user);
+      location.href='admin.html';
+    } else {
+      alert('Usuario o clave incorrecta');
+    }
+
+  } catch(e){
+    alert("❌ ERROR: " + e.message);
+  }
+}
 mport { fetchMods, saveModToDB } from "./firebase.js";
   const user = document.getElementById('adminUser').value.trim();
 mport { fetchMods, saveModToDB } from "./firebase.js";
