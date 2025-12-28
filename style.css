@@ -1,3 +1,9 @@
+<script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-auth-compat.js"></script>
+
+<script src="script.js"></script>
+
 :root{--bg:#0a0a0a;--card:#121212;--muted:#d0d0d0;--accent:#ff1a1a}
 *{box-sizing:border-box}html,body{height:100%;margin:0;font-family:Inter, Poppins, sans-serif;background:var(--bg);color:var(--muted)}
 a{color:var(--accent);text-decoration:none}
